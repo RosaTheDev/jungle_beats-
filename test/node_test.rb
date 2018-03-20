@@ -1,9 +1,11 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/node'
+require 'pry'
 
 class NodeTest < Minitest::Test
   def test_class_exisit
+    binding.pry
     node_1  = Node.new("plop")
     assert_instance_of  Node, node_1
   end
@@ -15,6 +17,6 @@ class NodeTest < Minitest::Test
 
     def test_next_node_is_nil
       node_3 = Node.new(nil)
-      assert_equal nil, node_3.next_node
+      assert_nil nil, node_3.next_node
     end
 end

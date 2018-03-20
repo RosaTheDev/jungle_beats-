@@ -1,13 +1,14 @@
+require './lib/linked_list'
 class Node
-  attr_reader  :sound
-  def  initialize(attribute)
-    @sound = attribute
-  end
-  def data
-    @sound
+  attr_accessor :next_node
+  attr_reader  :data
+
+  binding.pry
+  def  initialize(data)
+    @data= data
+    @next_node = nil
   end
 
-    def next_node
-    
-    end
+
+
 end
