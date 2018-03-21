@@ -1,7 +1,9 @@
 require './lib/node'
 require 'pry'
 class LinkedList
-  attr_reader :head
+  attr_reader :head,
+                    :node_count
+
 
 
 
@@ -11,9 +13,10 @@ class LinkedList
   end
 
   def append(data)
-    @head=  Node.new(data)
+    binding.pry
+    @head = Node.new(data)
     @node_count += 1
-    end
+  end
 
     def next_node
       @next_node = Node.new
@@ -21,5 +24,8 @@ class LinkedList
     end
     def count
       @node_count
+    end
+    def to_string
+      @head.data.to_s
     end
 end

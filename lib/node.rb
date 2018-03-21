@@ -3,7 +3,7 @@ class Node
   attr_accessor :next_node
   attr_reader  :data
 
-  binding.pry
+  # binding.pry
   def  initialize(data)
     @data= data
     @next_node = nil
