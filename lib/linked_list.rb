@@ -9,13 +9,22 @@ class LinkedList
 
   def initialize
     @head = nil
-
+    @next_node
   end
 
   def append(data)
+    current = @head
     # binding.pry
-    @head = Node.new(data)
-    data 
+    next_node = @next_node
+   # while current.next_node != nil
+   #  current = current.next_node
+   #  end
+   #
+   #  if current.next_node == nil
+   #    current.next_node = Node.new(data)
+   #  end
+   @head = Node.new(data)
+   data
 
   end
 
@@ -25,12 +34,15 @@ class LinkedList
     end
     def count
     node_count = 0
-    current_node = @head
-    node_count += 1 unless @head.nil?
-    current_node = current_node.next_node
+    # binding.pry
+    if @head == nil
+      node_count
+    else
+      node_count += 1
 
     end
 
+  end
     def to_string
       @head.data.to_s
     end

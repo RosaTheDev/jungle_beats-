@@ -20,7 +20,6 @@ class LinkedListTest < MiniTest::Test
           # binding.pry
     list = LinkedList.new
     # binding.pry
-    binding.pry
     list.append("doop")
     assert_instance_of  Node,  list.head
     assert_equal "doop", list.head.data
@@ -28,7 +27,7 @@ class LinkedListTest < MiniTest::Test
 
 
   def  test_head_goes_to_next_node
-    # skip
+    skip
     # binding.pry
       list = LinkedList.new
       list.append("deep")
@@ -38,11 +37,15 @@ class LinkedListTest < MiniTest::Test
 
   def test_if_the_list_increments_by_one
     list = LinkedList.new
-
     assert_equal 0, list.count
+    list.append("doop")
+    assert_equal 1,list.count
+    list.append("deep")
+    assert_equal 2, list.count
   end
 
   def test_if_string_is_doop
+    # binding.pry
     # binding.pry
     list = LinkedList.new
     list.append("doop")
