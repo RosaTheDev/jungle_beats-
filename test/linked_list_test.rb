@@ -27,7 +27,7 @@ class LinkedListTest < MiniTest::Test
 
 
   def  test_head_goes_to_next_node
-    skip
+    # skip
     # binding.pry
       list = LinkedList.new
       list.append("deep")
